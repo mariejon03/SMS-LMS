@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management System</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            overflow: hidden;
+        }
+
+        /* Set the background image and apply blur effect to a pseudo-element */
+        .blurred-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('BCP.jpg');
+            background-size: cover;
+            background-position: center;
+            z-index: -1;
+        }
+
+        /* Custom styles for the password eye icon */
+        .password-container {
+            position: relative;
+        }
+        .password-toggle {
+            position: absolute;
+            top: 50%;
+            right: 1rem;
+            transform: translateY(-50%);
+            cursor: pointer;
+            color: #9ca3af; /* Gray-400 */
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <!-- Blurred background container -->
+    <div class="blurred-bg"></div>
+
+    <div class="flex flex-col items-center justify-center min-h-screen relative p-4">
+        <!-- Login Card -->
+        <div class="bg-white bg-opacity-80 backdrop-filter backdrop-blur-lg p-6 md:p-8 rounded-3xl shadow-2xl w-full max-w-sm flex flex-col items-center">
+            <!-- Logo -->
+            <img src="SMS3logo.jpg" alt="School Management System Logo" class="mx-auto mb-8 rounded-full shadow-lg w-[100px] h-[100px]">
+          
+            <!-- Login Form -->
+            <form id="loginForm" class="w-full">
+                <!-- Username Field -->
+                <div class="mb-4">
+                    <label for="username" class="block text-sm font-medium text-gray-700 mb-1">Username</label>
+                    <div class="relative">
+                        <input type="text" id="username" name="username" class="w-full px-4 py-2 pl-10 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition" placeholder="s2*****">
+                        <svg class="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a8.977 8.977 0 0114.998 0A17.933 17.933 0 0012 16.5c-3.128 0-6.104.95-8.699 2.768z" />
+                        </svg>
+                    </div>
+                </div>
+                
+                <!-- Password Field -->
+                <div class="mb-4">
+                    <label for="password" class="block text-sm font-medium text-gray-700 mb-1">Password</label>
+                    <div class="password-container">
+                        <input type="password" id="password" name="password" class="w-full px-4 py-2 pl-10 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition" placeholder="Password">
+                        <svg class="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5h.008v.008h-.008v-.008z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 10.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 18.75a6.75 6.75 0 100-13.5 6.75 6.75 0 000 13.5z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 18.75a6.75 6.75 0 100-13.5 6.75 6.75 0 000 13.5z" />
+                        </svg>
+                        <svg id="password-toggle-icon" class="password-toggle w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.575 3.01 9.963 7.822.08.286.08.576 0 .865C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.575-3.01-9.963-7.822z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Forgotten Password Link -->
+                <div class="text-center mb-6">
+                    <a href="#" class="text-sm text-gray-600 hover:underline">Forgotten your username or password?</a>
+                </div>
+                
+                <!-- Log In Button -->
+                <button type="submit" class="w-full py-3 px-4 bg-blue-900 text-white font-semibold rounded-lg shadow-md hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition">
+                    Log in
+                </button>
+            </form>
+        </div>
+        
+        <!-- Cookies Notice -->
+        <div class="absolute bottom-4 right-4 text-xs text-gray-500">
+            © Cookies notice
+        </div>
+    </div>
+
+    <!-- Firebase SDKs -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+        import { getAuth, signInAnonymously, onAuthStateChanged, signInWithCustomToken } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+        import { getFirestore, doc, getDoc, setDoc, collection, query, where, getDocs } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+        
+        // Firebase configuration (provided by the canvas environment)
+        const firebaseConfig = typeof __firebase_config !== 'undefined' ? JSON.parse(__firebase_config) : {};
+        
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+        const db = getFirestore(app);
+
+        // Global variables for Firebase data
+        const appId = typeof __app_id !== 'undefined' ? __app_id : 'default-app-id';
+        let userId = null;
+
+        // Sign in with custom token or anonymously
+        const login = async () => {
+            try {
+                if (typeof __initial_auth_token !== 'undefined' && __initial_auth_token) {
+                    await signInWithCustomToken(auth, __initial_auth_token);
+                } else {
+                    await signInAnonymously(auth);
+                }
+            } catch (error) {
+                console.error("Firebase Auth Error:", error);
+            }
+        };
+
+        // Auth state observer
+        onAuthStateChanged(auth, async (user) => {
+            if (user) {
+                userId = user.uid;
+                console.log("User logged in:", userId);
+            } else {
+                console.log("User logged out.");
+                userId = null;
+            }
+        });
+
+        // Initial login
+        login();
+
+        // Password show/hide functionality
+        const passwordField = document.getElementById('password');
+        const passwordToggle = document.getElementById('password-toggle-icon');
+
+        passwordToggle.addEventListener('click', () => {
+            const type = passwordField.getAttribute('type') === 'password' ? 'text' : 'password';
+            passwordField.setAttribute('type', type);
+
+            // Toggle the eye icon
+            if (type === 'password') {
+                passwordToggle.innerHTML = `
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.575 3.01 9.963 7.822.08.286.08.576 0 .865C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.575-3.01-9.963-7.822z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                `;
+            } else {
+                passwordToggle.innerHTML = `
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.98 8.223A10.477 10.477 0 001.99 12c.791 1.77 2.385 3.235 4.316 4.148M18.02 8.223a10.477 10.477 0 012.008 3.777c-.791 1.77-2.385 3.235-4.316 4.148M12 15a3 3 0 110-6 3 3 0 010 6z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v6m-3-3h6" />
+                `;
+            }
+        });
+
+        // Login form submission handler
+        const loginForm = document.getElementById('loginForm');
+        loginForm.addEventListener('submit', (e) => {
+            e.preventDefault(); // Prevent the default form submission
+            
+            // In a real application, you would perform authentication here
+            // For this example, we'll just redirect to a dashboard page
+            window.location.href = 'dashboard.html';
+        });
+
+    </script>
+</body>
+</html>

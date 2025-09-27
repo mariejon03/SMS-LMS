@@ -1,0 +1,265 @@
+/* CSS Variables for easy theming */
+:root {
+    --primary-color: #1a237e; /* Dark Blue from Logo */
+    --secondary-color: #3f51b5; /* Lighter Blue for active items */
+    --accent-color: #d32f2f; /* Red from Logo */
+    --text-color: #333;
+    --text-color-light: #f5f5f5;
+    --bg-color: #f4f6f9;
+    --header-bg: #ffffff;
+    --card-bg: #ffffff;
+    --border-color: #e0e0e0;
+    --shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+body.dark-mode {
+    --text-color: #e0e0e0;
+    --bg-color: #121212;
+    --header-bg: #1e1e1e;
+    --card-bg: #2c2c2c;
+    --border-color: #444;
+    --shadow: 0 1px 3px rgba(0,0,0,0.4);
+}
+
+/* General Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+    overflow-x: hidden;
+}
+
+/* Main App Layout */
+.app-container {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    grid-template-rows: 60px 1fr;
+    grid-template-areas:
+        "sidenav header"
+        "sidenav main";
+    height: 100vh;
+    transition: grid-template-columns 0.3s ease-in-out;
+}
+
+/* Sidenav Styles */
+.sidenav {
+    grid-area: sidenav;
+    background-color: var(--primary-color);
+    color: var(--text-color-light);
+    display: flex;
+    flex-direction: column;
+    padding-top: 15px;
+    transition: margin-left 0.3s ease-in-out;
+    width: 250px;
+    height: 100%;
+}
+
+.sidenav-logo {
+    padding: 0 20px 20px 20px;
+    text-align: center;
+}
+
+.sidenav-logo img {
+    max-width: 80px;
+}
+
+.sidenav-nav ul {
+    list-style: none;
+}
+
+.sidenav-nav li a {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 20px;
+    color: var(--text-color-light);
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: background-color 0.2s;
+}
+
+.sidenav-nav li a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.sidenav-nav li.active a {
+    background-color: var(--secondary-color);
+    border-left: 4px solid var(--accent-color);
+    padding-left: 16px;
+    font-weight: 600;
+}
+
+.sidenav-nav li a i {
+    width: 20px;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+/* Header Styles */
+.header {
+    grid-area: header;
+    background-color: var(--header-bg);
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    box-shadow: var(--shadow);
+    z-index: 999;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+#sidenav-toggle {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+.header-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.header-nav ul li a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Profile Dropdown */
+.profile-dropdown {
+    position: relative;
+}
+
+.profile-btn {
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 45px;
+    background-color: var(--card-bg);
+    min-width: 160px;
+    box-shadow: var(--shadow);
+    z-index: 1;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+}
+
+.dropdown-content a {
+    color: var(--text-color);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.dropdown-content a:hover {
+    background-color: var(--bg-color);
+}
+
+.dropdown-content.show {
+    display: block;
+}
+
+/* Main Content */
+.main-content {
+    grid-area: main;
+    padding: 25px;
+    overflow-y: auto;
+}
+
+/* Dark Mode Toggle Switch */
+.dark-mode-switch {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1001;
+}
+.dark-mode-switch .switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+.dark-mode-switch .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.dark-mode-switch .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+.dark-mode-switch .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+.dark-mode-switch input:checked + .slider {
+    background-color: var(--secondary-color);
+}
+.dark-mode-switch input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+
+/* Sidenav Toggling and Responsive Logic */
+.app-container.sidenav-closed {
+    grid-template-columns: 0 1fr;
+}
+.app-container.sidenav-closed .sidenav {
+    margin-left: -250px;
+}
+
+@media (max-width: 992px) {
+    .header-nav {
+        display: none; /* Hide text links on smaller screens */
+    }
+}

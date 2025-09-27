@@ -1,0 +1,246 @@
+/* style.css */
+
+/* --- CSS Variables for Theming --- */
+:root {
+    --primary-color: #1a237e;
+    
+   
+    --text-color: #212529;
+    --text-muted: #6c757d;
+    --text-light: #f8f9fa;
+    --bg-color: #f4f6f9;
+    --header-bg: #ffffff;
+    --card-bg: #ffffff;
+    --border-color: #dee2e6;
+    --shadow: 0 2px 4px rgba(0,0,0,0.07);
+    --course-card-bg: linear-gradient(145deg, #2c3e50, #34495e);
+}
+
+/* --- BODY.DARK-MODE BLOCK REMOVED --- */
+
+/* --- General & Layout Styles --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+    overflow-x: hidden;
+}
+
+.app-container {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    grid-template-rows: 64px 1fr;
+    grid-template-areas:
+        "sidenav header"
+        "sidenav main";
+    height: 100vh;
+    transition: grid-template-columns 0.3s ease-in-out;
+}
+
+/* --- Sidenav --- */
+.sidenav {
+    grid-area: sidenav;
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    transition: margin-left 0.3s ease-in-out;
+    width: 250px;
+    height: 100%;
+}
+
+.sidenav-logo {
+    padding: 0 20px;
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sidenav-logo img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    border: 3px solid var(--secondary-color);
+    object-fit: cover;
+}
+
+.sidenav-nav ul {
+    list-style: none;
+}
+
+.sidenav-nav a {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 16px 25px;
+    color: var(--text-light);
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: background-color 0.2s;
+}
+
+.sidenav-nav a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.sidenav-nav li.active a {
+    background-color: var(--secondary-color);
+    border-left: 4px solid var(--accent-color);
+    padding-left: 21px;
+    font-weight: 600;
+}
+
+.sidenav-nav i {
+    width: 20px;
+    font-size: 1.1rem;
+}
+
+/* --- Header --- */
+.header {
+    grid-area: header;
+    background-color: var(--header-bg);
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 25px;
+    box-shadow: var(--shadow);
+    z-index: 100;
+}
+
+#sidenav-toggle {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--text-color);
+    cursor: pointer;
+    margin-right: 15px;
+}
+
+.header-nav {
+    display: none; /* Hidden on mobile */
+}
+
+@media (min-width: 992px) {
+    .header-nav {
+        display: block;
+    }
+}
+
+.header-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.header-nav a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* --- Profile Dropdown (Detailed Version) --- */
+.profile-dropdown {
+    position: relative;
+}
+
+.profile-btn {
+    background-color: #6c757d;
+    color: white;
+    border: none;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 55px;
+    background-color: var(--card-bg);
+    width: 320px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 101;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+}
+
+.dropdown-content.show {
+    display: block;
+}
+
+.dropdown-profile-info {
+    padding: 16px;
+    border-bottom: 1px solid var(--border-color);
+    background-color: rgba(0,0,0,0.02);
+}
+
+.dropdown-profile-info h4 {
+    margin: 0 0 4px 0;
+    font-size: 1rem;
+    color: var(--text-color);
+}
+
+.dropdown-profile-info p {
+    margin: 0;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.dropdown-content a {
+    color: var(--text-color);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+
+.dropdown-content a:hover {
+    background-color: var(--bg-color);
+}
+
+/* --- Main Content & Course Cards --- */
+.main-content {
+    grid-area: main;
+    padding: 30px;
+    overflow-y: auto;
+}
+
+/* ... (The rest of your content styles remain unchanged) ... */
+
+
+/* --- DARK MODE TOGGLE STYLES REMOVED --- */
+
+
+/* --- Sidenav Toggling Logic --- */
+.app-container.sidenav-closed {
+    grid-template-columns: 0 1fr;
+}
+.app-container.sidenav-closed .sidenav {
+    margin-left: -250px;
+}
+
+
+
+
