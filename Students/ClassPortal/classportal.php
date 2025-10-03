@@ -227,7 +227,7 @@
                             </a>
                         </div>
                         <div class="col-md-6 col-lg-3">
-                            <a href="#" class="subject-card card-bg-2">
+                            <a href="../CapstoneProject/Capstoneproject.php" class="subject-card card-bg-2">
                                 <i class="bi bi-three-dots card-menu-icon"></i>
                                 <div>
                                     <h5 class="title">Capstone Project 1</h5>
@@ -242,7 +242,7 @@
                             </a>
                         </div>
                         <div class="col-md-6 col-lg-3">
-                            <a href="#" class="subject-card card-bg-3">
+                            <a href="../IT ELECTIVE 4/ITE.php" class="subject-card card-bg-3">
                                 <i class="bi bi-three-dots card-menu-icon"></i>
                                 <div>
                                     <h5 class="title">IT Elective 4</h5>

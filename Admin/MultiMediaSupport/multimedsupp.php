@@ -127,26 +127,14 @@
         </table>
       </div>
 
-      <!-- Insights -->
-      <div class="mt-4">
-        <h6 class="fw-bold">Insights</h6>
-        <ul class="list-unstyled text-muted">
-          <li><i class="bi bi-check-circle-fill text-success me-2"></i> Videos have the highest engagement among students.</li>
-          <li><i class="bi bi-lightbulb-fill text-info me-2"></i> Consider adding more audio-based lessons for accessibility.</li>
-          <li><i class="bi bi-exclamation-circle-fill text-warning me-2"></i> Ensure all PDFs are mobile-friendly for better student access.</li>
-        </ul>
-      </div>
+    
     </div>
   </div>
 </div>
              
 
 
-  <footer class="mt-auto bg-light">
-    <div class="container text-center">
-      <p class="text-muted">© 2023 Your Company. All rights reserved.</p>
-    </div>
-  </footer>
+ 
 
 
   </style>

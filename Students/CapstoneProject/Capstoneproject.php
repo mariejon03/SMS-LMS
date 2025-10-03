@@ -139,14 +139,14 @@
   <nav aria-label="breadcrumb" class="mb-4">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="#">Student Courses</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Big Data Analysis</li>
+                            <li class="breadcrumb-item active" aria-current="page">Capstone Project 1</li>
                         </ol>
                     </nav>
 
                     <div class="subject-header-card mb-5">
                         <div class="row align-items-center">
                             <div class="col-md-8">
-                                <h2 class="mb-1 fw-bold">Big Data Analysis</h2>
+                                <h2 class="mb-1 fw-bold">Capstone</h2>
                                 <p class="text-muted mb-2">Instructor: Dr. Evelyn Reed</p>
                                 <div class="progress-section mt-3">
                                     <p class="progress-label mb-1"><i class="bi bi-graph-up"></i>6% complete</p>
@@ -174,7 +174,7 @@
                                     <h5 class="title">Learning Materials</h5>
                                     <p class="subtitle">Assess your knowledge and prepare for exams.</p>
                                 </div>
-                                <a href="../BigData/learningmaterials.php" class="btn btn-solid-blue ms-auto">View Modules</a>
+                                <a href="../CapstoneProject/learningmaterials.php" class="btn btn-solid-blue ms-auto">View Modules</a>
                             </div>
                         </div>
 
@@ -188,7 +188,7 @@
                                     <h5 class="title">Quizzes</h5>
                                     <p class="subtitle">Assess your knowledge and prepare for exams.</p>
                                 </div>
-                                <a href="../OnlineQuizzes/onlinequizzes.php" class="btn btn-solid-blue ms-auto">View Quizzes</a>
+                                <a href="../CapstoneProject/onlinequiz.php" class="btn btn-solid-blue ms-auto">View Quizzes</a>
                             </div>
                         </div>
 

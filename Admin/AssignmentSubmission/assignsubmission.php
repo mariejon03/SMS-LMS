@@ -120,15 +120,7 @@
                                             </table>
                                         </div>
 
-                                        <!-- Insights -->
-                                        <div class="mt-4">
-                                            <h6 class="fw-bold">Insights</h6>
-                                            <ul class="list-unstyled text-muted">
-                                                <li><i class="bi bi-lightbulb-fill text-info me-2"></i> Most students submitted on time for this assignment.</li>
-                                                <li><i class="bi bi-exclamation-triangle-fill text-warning me-2"></i> Late submissions increased compared to the last task.</li>
-                                                <li><i class="bi bi-check2-circle text-success me-2"></i> Consider sending reminders to students before deadlines.</li>
-                                            </ul>
-                                        </div>
+                                      
                                     </div>
                                 </div>
                             </div>
@@ -140,11 +132,7 @@
     </div>
 
 
-    <footer class="mt-auto bg-light">
-        <div class="container text-center">
-            <p class="text-muted">© 2023 Your Company. All rights reserved.</p>
-        </div>
-    </footer>
+    
 
 
     </style>

@@ -56,6 +56,7 @@
                     <li><a href="../GradingIntegration/gradingintegration.php"><i class="fa-solid fa-file-signature"></i> Grading Integration</a></li>
                     <li><a href="../ModuleCompletionTracking/modulecompletiontracking.php"><i class="fa-solid fa-tasks"></i> Module Completion</a></li>
                     <li><a href="../LMSAnalytics/LMSAnalytics.php"><i class="fa-solid fa-chart-line"></i> Analytics</a></li>
+                    <li><a href="../LMSAnalytics/LMSAnalytics.php"><i class="fa-solid fa-chart-line"></i> Track</a></li>
                     
                    
                    

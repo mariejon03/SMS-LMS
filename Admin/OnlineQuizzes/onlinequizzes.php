@@ -119,15 +119,7 @@
             </table>
           </div>
 
-          <!-- Insights -->
-          <div class="mt-4">
-            <h6 class="fw-bold">Insights</h6>
-            <ul class="list-unstyled text-muted">
-              <li><i class="bi bi-lightbulb-fill text-info me-2"></i> Students perform best in quizzes with visual aids.</li>
-              <li><i class="bi bi-check-circle-fill text-success me-2"></i> Average quiz scores have improved compared to last month.</li>
-              <li><i class="bi bi-exclamation-circle-fill text-warning me-2"></i> Low participation in Science Quiz 2 — consider extending the deadline.</li>
-            </ul>
-          </div>
+        
         </div>
       </div>
     </div>

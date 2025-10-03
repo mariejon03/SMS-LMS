@@ -138,15 +138,7 @@
                         </table>
                     </div>
 
-                    <!-- Insights -->
-                    <div class="mt-4">
-                        <h6 class="fw-bold">Insights</h6>
-                        <ul class="list-unstyled text-muted">
-                            <li><i class="bi bi-check-circle-fill text-success me-2"></i> Most professors are using Zoom (70%).</li>
-                            <li><i class="bi bi-lightbulb-fill text-info me-2"></i> Attendance rates are highest in Science classes.</li>
-                            <li><i class="bi bi-exclamation-circle-fill text-warning me-2"></i> Some sessions were cancelled due to link errors.</li>
-                        </ul>
-                    </div>
+                  
 
                 </div>
             </div>
@@ -155,11 +147,7 @@
     
 
 
-    <footer class="mt-auto bg-light">
-        <div class="container text-center">
-            <p class="text-muted">© 2023 Your Company. All rights reserved.</p>
-        </div>
-    </footer>
+  
 
 
     </style>
