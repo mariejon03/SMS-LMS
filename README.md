@@ -1,4 +1,4 @@
-# SMS3 Responsive Sidebar with Dark/Light Mode
+# SMS3 Responsive Sidebar
 
 A modern, responsive sidebar navigation system for the SMS3 Learning Management System with dark/light mode toggle functionality.
 
