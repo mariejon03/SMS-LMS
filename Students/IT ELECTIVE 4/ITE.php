@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SMS3</title>
+  <title>ITE</title>
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="../../style.css">
@@ -220,10 +220,10 @@
                                     Actions
                                 </button>
                                 <ul class="dropdown-menu dropdown-menu-end">
-                                    <li><a class="dropdown-item" href="#"><i class="bi bi-book-fill"></i> View Module 1</a></li>
-                                    <li><a class="dropdown-item" href="#"><i class="bi bi-question-circle-fill"></i> Quiz</a></li>
-                                    <li><a class="dropdown-item" href="#"><i class="bi bi-pencil-square"></i> Assignment</a></li>
-                                    <li><a class="dropdown-item" href="#"><i class="bi bi-camera-video-fill"></i> Virtual Class</a></li>
+                                    <li><a class="dropdown-item" href="../IT ELECTIVE 4/Viewmodule1.php"><i class="bi bi-book-fill"></i> View Module 1</a></li>
+                                    <li><a class="dropdown-item" href="../IT ELECTIVE 4/Quiz1.php"><i class="bi bi-question-circle-fill"></i> Quiz</a></li>
+                                    <li><a class="dropdown-item" href="../IT ELECTIVE 4/Assignment1.php"><i class="bi bi-pencil-square"></i> Assignment</a></li>
+                                    <li><a class="dropdown-item" href="../IT ELECTIVE 4/Virtualclass1.php"><i class="bi bi-camera-video-fill"></i> Virtual Class</a></li>
                                 </ul>
                             </div>
                         </div>

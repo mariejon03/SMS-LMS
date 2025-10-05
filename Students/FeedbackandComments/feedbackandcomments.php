@@ -52,11 +52,11 @@
             <div class="d-flex align-items-center mb-3 mb-md-0">
               <i class="bi bi-chat-quote-fill text-primary" style="font-size: 2.5rem;"></i>
               <div class="ms-3">
-                <h2 class="mb-0 fw-bold">Give Feedback to Professors</h2>
+                <h2 class="mb-0 fw-bold">Give Feedback to Teachers</h2>
                 <p class="text-muted mb-0">Submit feedback/comments on your professors by subject.</p>
               </div>
             </div>
-            <a href="#" class="btn btn-outline-secondary">
+            <a href="../Dashboard/dashboard.php" class="btn btn-outline-secondary">
               <i class="bi bi-arrow-left me-2"></i>Back to Dashboard
             </a>
           </div>
@@ -67,9 +67,10 @@
                 <label for="subjectSelect" class="form-label fw-bold">Subject</label>
                 <select id="subjectSelect" class="form-select">
                   <option selected>Choose subject...</option>
-                  <option>Math</option>
-                  <option>Science</option>
-                  <option>English</option>
+                  <option>Big Data</option>
+                  <option>IT ELECTIVE 4</option>
+                  <option>Capstone Project 1</option>
+                  <option>OJT - Practicum 1</option>
                 </select>
               </div>
               <div class="col-md-6">

@@ -16,6 +16,8 @@
     <link rel="stylesheet" href="style.css">
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    
 </head>
 <body>
 
@@ -60,7 +62,7 @@
                             <h4><?php echo htmlspecialchars($user_full_name); ?></h4>
                             <p><?php echo htmlspecialchars($user_email); ?></p>
                         </div>
-                        <a href="#">Profile</a>
+                        <a href="../My_Profile/My_Profile.php">Profile</a>
                         <a href="#">Log out</a>
                     </div>
                 </div>
